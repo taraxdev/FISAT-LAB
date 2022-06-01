@@ -95,23 +95,23 @@ SQL> desc SALES_MASTER;
  PINCODE					    NUMBER(8)
  STATE						    VARCHAR2(15)
 
-SQL> insert into  CLIENT_MASTER values('C00001','Akshaya','vellaykudam','vellaykudam','Mumbai',683545,'Maharashtra',900);
+SQL> insert into  CLIENT_MASTER values('C00001','Ramesh','Rohini','Rohini','Mumbai',683545,'Maharashtra',900);
 
 1 row created.
 
-SQL> insert into  CLIENT_MASTER values('C00002','Anunayana','kavanal','kavanal','Banguluru',683549,'Maharashtra',800);
+SQL> insert into  CLIENT_MASTER values('C00002','Suresh','pitampura','pitampura','Banguluru',683549,'Maharashtra',800);
 
 1 row created.
 
-SQL> insert into  CLIENT_MASTER values('C00003','Amoolya','kiliyeli','kilyeli','Manguluru',683579,'Maharashtra',1000);
+SQL> insert into  CLIENT_MASTER values('C00003','Tanya','sarojini','sarojini','Manguluru',683579,'Maharashtra',1000);
 
 1 row created.
 
-SQL> insert into  CLIENT_MASTER values('C00004','Nandhu','varikkassery','varikkassery','Ernakulam',683565,'Kerala',1500);
+SQL> insert into  CLIENT_MASTER values('C00004','Mahi','hauzkhas','hauzkhas','Ernakulam',683565,'Kerala',1500);
 
 1 row created.
 
-SQL> insert into  CLIENT_MASTER values('C00005','Akhil','pulishery','pulishery','Ernakulam',683535,'Kerala',1700);
+SQL> insert into  CLIENT_MASTER values('C00005','Shubangi','noida','noida','Ernakulam',683535,'Kerala',1700);
 
 1 row created.
 
@@ -119,11 +119,11 @@ SQL> select * from CLIENT_MASTER;
 
 CLIENT NAME		    ADDRESS1			   ADDRESS2			  CITY		     PINCODE STATE		 BALDUE
 ------ -------------------- ------------------------------ ------------------------------ --------------- ---------- --------------- ----------
-C00001 Akshaya		    vellaykudam 		   vellaykudam			  Mumbai	      683545 Maharashtra	    900
-C00002 Anunayana	    kavanal			   kavanal			  Banguluru	      683549 Maharashtra	    800
-C00003 Amoolya		    kiliyeli			   kilyeli			  Manguluru	      683579 Maharashtra	   1000
-C00004 Nandhu		    varikkassery		   varikkassery 		  Ernakulam	      683565 Kerala		   1500
-C00005 Akhil		    pulishery			   pulishery			  Ernakulam	      683535 Kerala		   1700
+C00001 Ramesh		    Rohini	 		   Rohini			  Mumbai	      683545 Maharashtra	    900
+C00002 Suresh	            pitampura			   pitampura			  Banguluru	      683549 Maharashtra	    800
+C00003 Tanya		    sarojini			   sarojini			  Manguluru	      683579 Maharashtra	   1000
+C00004 Mahi		    hauzkhas		  	   hauzkhas 		          Ernakulam	      683565 Kerala		   1500
+C00005 Shubangi		    noida			   noida			  Ernakulam	      683535 Kerala		   1700
 
 ```
 
