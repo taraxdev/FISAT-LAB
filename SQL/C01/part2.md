@@ -138,7 +138,10 @@ SQL> select name from CLIENT_MASTER where name like '_a%';
 
 NAME
 --------------------
-Nandhu
+Ramesh
+Tanya
+Mahi
+
 ```
 
 (b) listing of clients who stay in a city whose first letter is ‘M’ 
@@ -148,8 +151,9 @@ SQL> select * from CLIENT_MASTER where city like 'M%';
 
 CLIENT NAME		    ADDRESS1			   ADDRESS2			  CITY		     PINCODE STATE		 BALDUE
 ------ -------------------- ------------------------------ ------------------------------ --------------- ---------- --------------- ----------
-C00001 Akshaya		    vellaykudam 		   vellaykudam			  Mumbai	      683545 Maharashtra	    900
-C00003 Amoolya		    kiliyeli			   kilyeli			  Manguluru	      683579 Maharashtra	   1000
+C00001 Ramesh		    Rohini			   Rohini			  Mumbai	      683545 Maharashtra	    900
+C00003 Tanya		    sarojini			   sarojini			  Manguluru	      683579 Maharashtra	   1000
+
 
 ```
 
@@ -160,8 +164,10 @@ SQL> select * from CLIENT_MASTER where city='Banguluru' or city='Manguluru';
 
 CLIENT NAME		    ADDRESS1			   ADDRESS2			  CITY		     PINCODE STATE		 BALDUE
 ------ -------------------- ------------------------------ ------------------------------ --------------- ---------- --------------- ----------
-C00002 Anunayana	    kavanal			   kavanal			  Banguluru	      683549 Maharashtra	    800
-C00003 Amoolya		    kiliyeli			   kilyeli			  Manguluru	      683579 Maharashtra	   1000
+C00002 Suresh		    pitampura			   pitampura			  Banguluru	      683549 Maharashtra	    800
+C00003 Tanya		    sarojini			   sarojini			  Manguluru	      683579 Maharashtra	   1000
+
+
 ```
 
 (d) list all clients whose BalDue is greater than 10000 
@@ -171,18 +177,21 @@ SQL> select * from CLIENT_MASTER where baldue>1000;
 
 CLIENT NAME		    ADDRESS1			   ADDRESS2			  CITY		     PINCODE STATE		 BALDUE
 ------ -------------------- ------------------------------ ------------------------------ --------------- ---------- --------------- ----------
-C00004 Nandhu		    varikkassery		   varikkassery 		  Ernakulam	      683565 Kerala		   1500
-C00005 Akhil		    pulishery			   pulishery			  Ernakulam	      683535 Kerala		   1700
+C00004 Mahi		    hauzkhas			   hauzkhas			  Ernakulam	      683565 Kerala		   1500
+C00005 Shubangi 	    noida			   noida			  Ernakulam	      683535 Kerala		   1700
+
+
 ```
 (f) list products whose selling price is greater than 500 and less than or equal to 750 
 
 ```sql
 SQL> select * from PRODUCT_MASTER WHERE SELLPRICE>'500' AND SELLPRICE<='750';
 
-PRODUC DESCRIPTION     PROFITPERCENT UNITMEASUR   QYONHAND REORDERLVL  SELLPRICE  COSTPRICE
------- --------------- ------------- ---------- ---------- ---------- ---------- ----------
-P003   POWDER			1.94 115gm		50	   18	     600	580
-P004   BOOK			3.94 50gm	       150	   20	     750	680
+PRODUC DESCRIPTION     PROFITPECET UNITMEASUR  QTYONHAND REORDERLVL  SELLPRICE	COSTPRICE
+------ --------------- ----------- ---------- ---------- ---------- ---------- ----------
+P003   POWDER		      1.94 115gm	      50	 18	   600	      580
+P004   BOOK		      3.94 50gm 	     150	 20	   750	      680
+
 
 ```
 
@@ -193,8 +202,10 @@ SQL> select name,city,state from CLIENT_MASTER where state not in('Maharashtra')
 
 NAME		     CITY	     STATE
 -------------------- --------------- ---------------
-Nandhu		     Ernakulam	     Kerala
-Akhil		     Ernakulam	     Kerala
+Mahi		     Ernakulam	     Kerala
+Shubangi	     Ernakulam	     Kerala
+
+
 ```
 
 (i) calculating the average price of all products.
@@ -204,7 +215,9 @@ SQL> SELECT AVG(COSTPRICE) FROM PRODUCT_MASTER;
 
 AVG(COSTPRICE)
 --------------
-	   646
+	   710
+
+
 ```
 
 (j) determining the maximum and minimum price for the product prices.
@@ -217,8 +230,9 @@ DESCRIPTION	MINIMUMPRICE   MAXPRICE
 POWDER			 580	    580
 BOOK			 680	    680
 SOAP			 700	    700
-PASTE			 390	    390
 PEN			 880	    880
+
+
 ```
 
 (k) count the number of products having the price greater than or equal to 500
@@ -229,5 +243,6 @@ SQL> select count(description) from PRODUCT_MASTER where sellprice>=500;
 COUNT(DESCRIPTION)
 ------------------
 		 4
+
 
 ```
